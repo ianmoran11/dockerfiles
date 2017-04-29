@@ -1,0 +1,13 @@
+# get the base image, this one has R, RStudio and pandoc
+FROM rocker/verse:3.3.2
+
+# required
+MAINTAINER Ian Moran <ian.moran11@gmail.com>
+
+RUN echo "root:root" | chpasswd
+
+# go into the repo directory
+RUN   apt-get update 
+
+# To keep on
+#sudo docker run --restart=always -d your_image
