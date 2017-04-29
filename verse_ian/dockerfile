@@ -6,8 +6,11 @@ MAINTAINER Ian Moran <ian.moran11@gmail.com>
 
 RUN echo "root:root" | chpasswd
 
+
+
 # go into the repo directory
 RUN   apt-get update 
+RUN sudo apt-get install libpoppler-cpp-dev
 
 # To keep on
 #sudo docker run --restart=always -d your_image
