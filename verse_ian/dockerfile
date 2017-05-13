@@ -9,7 +9,15 @@ RUN echo "root:root" | chpasswd
 
 # go into the repo directory
 RUN   apt-get update 
-RUN sudo apt-get install libpoppler-cpp-dev
+
 
 # To keep on
 #sudo docker run --restart=always -d your_image
+
+# to build this image:
+# docker build -t ianmoran11/verse_latest /home/ubuntu/dockerfiles/verse_ian
+
+# to run this container:
+# docker run  --restart=always -dp 8787:8787 ianmoran11/verse_latest
+
+
