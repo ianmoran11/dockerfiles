@@ -15,9 +15,9 @@ RUN   apt-get update
 #sudo docker run --restart=always -d your_image
 
 # to build this image:
-# docker build -t ianmoran11/verse_latest /home/ubuntu/dockerfiles/verse_ian
+# docker build -t ianmoran11/tidyverse_ian_3.4.0 /home/ubuntu/dockerfiles/tidyverse_ian_3.4.0
 
 # to run this container:
-# docker run  --restart=always -dp 8787:8787 ianmoran11/verse_latest
+# docker run  --restart=always -dp 8787:8787 ianmoran11/tidyverse_ian_3.4.0
 
 
