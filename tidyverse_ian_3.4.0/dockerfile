@@ -14,7 +14,7 @@ RUN   apt-get update
 RUN apt-get update -qq  \ 
   && R -e "source('https://bioconductor.org/biocLite.R')" \
   && install2.r --error \
-    --deps TRUE \
+    --deps FALSE \
     tidyverse \
     dplyr \
     ggplot2 \
