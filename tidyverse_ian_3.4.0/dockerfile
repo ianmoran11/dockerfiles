@@ -33,7 +33,6 @@ RUN apt-get update -qq  \
     stringr \
     tibble \
     foreign \
-    intsvy  \
     dplyr  \
     ggplot2 \
     tidyr  \
