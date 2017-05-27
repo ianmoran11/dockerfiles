@@ -11,6 +11,43 @@ RUN echo "root:root" | chpasswd
 RUN   apt-get update 
 
 
+RUN apt-get update -qq  \ 
+  && R -e "source('https://bioconductor.org/biocLite.R')" \
+  && install2.r --error \
+    --deps TRUE \
+    tidyverse \
+    dplyr \
+    ggplot2 \
+    devtools \
+    formatR \
+    remotes \ 
+    broom \
+    dplyr \
+    ggplot2 \     
+    haven  \
+    knitr  \
+    lubridate \
+    purrr \
+    readr \
+    tidyr \
+    stringr \
+    tibble \
+    foreign \
+    intsvy  \
+    dplyr  \
+    ggplot2 \
+    tidyr  \
+    rdrop2  \
+    aws.s3 \ 
+    pdftools \
+    rvest  \
+    selectr \
+    xml2 \ 
+    quanteda \
+    stm  \
+    magrittr 
+
+
 # To keep on
 #sudo docker run --restart=always -d your_image
 
@@ -19,5 +56,8 @@ RUN   apt-get update
 
 # to run this container:
 # docker run  --restart=always -dp 8787:8787 ianmoran11/tidyverse_ian_3.4.0
+
+
+
 
 
