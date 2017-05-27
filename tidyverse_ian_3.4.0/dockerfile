@@ -42,7 +42,33 @@ RUN apt-get update -qq  \
     rvest  \
     selectr \
     xml2 \ 
+    magrittr \
+    broom 
+    dplyr \
+    ggplot2 \     
+    haven  \
+    knitr \
+    lubridate   \
+    purrr  \
+    readr \
+    tidyr \
+    stringr \
+    tibble \
+    foreign \
+    intsvy \
+    dplyr \
+    ggplot2 \
+    tidyr  \
+    rdrop2  \
+    aws.s3  \
+    pdftools \
+    rvest  \
+    selectr \
+    xml2  \
+    quanteda \
+    stm  \
     magrittr 
+
 
 
 RUN  git config --global user.email 'ian.moran11@gmail.com'
