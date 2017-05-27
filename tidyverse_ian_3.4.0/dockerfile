@@ -43,7 +43,7 @@ RUN apt-get update -qq  \
     selectr \
     xml2 \ 
     magrittr \
-    broom 
+    broom  \
     dplyr \
     ggplot2 \     
     haven  \
