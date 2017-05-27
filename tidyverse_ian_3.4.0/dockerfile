@@ -16,7 +16,7 @@ RUN R -e "options(repos='https://mran.microsoft.com/snapshot/2017-05-01')"
 RUN apt-get update -qq  \ 
   && R -e "source('https://bioconductor.org/biocLite.R')" \
   && install2.r --error \
-    --deps FALSE \
+    --deps TRUE \
     tidyverse \
     dplyr \
     ggplot2 \
@@ -43,6 +43,11 @@ RUN apt-get update -qq  \
     selectr \
     xml2 \ 
     magrittr 
+
+
+RUN  git config --global user.email 'ian.moran11@gmail.com'
+RUN  git config --global user.name 'Ian Moran'
+
 
 
 # To keep on
