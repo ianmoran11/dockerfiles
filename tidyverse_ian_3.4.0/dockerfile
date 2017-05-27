@@ -39,8 +39,6 @@ RUN apt-get update -qq  \
     ggplot2 \
     tidyr  \
     rdrop2  \
-    aws.s3 \ 
-    pdftools \
     rvest  \
     selectr \
     xml2 \ 
