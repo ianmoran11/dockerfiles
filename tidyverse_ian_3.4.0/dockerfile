@@ -11,6 +11,8 @@ RUN echo "root:root" | chpasswd
 RUN   apt-get update 
 
 
+RUN R -e "options(repos='https://mran.microsoft.com/snapshot/2016-11-30')"
+
 RUN apt-get update -qq  \ 
   && R -e "source('https://bioconductor.org/biocLite.R')" \
   && install2.r --error \
