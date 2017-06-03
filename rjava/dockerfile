@@ -1,15 +1,12 @@
 # get the base image, this one has R, RStudio and pandoc
-FROM rocker/tidyverse:3.4.0
+FROM rocker/r-base:latest
 # required
 MAINTAINER Ian Moran <ian.moran11@gmail.com>
 
 RUN echo "root:root" | chpasswd
 
 
-
-# go into the repo directory
-RUN   apt-get update 
-
+## Install Java
 RUN echo "deb http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main" \
       | tee /etc/apt/sources.list.d/webupd8team-java.list \
     &&  echo "deb-src http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main" \
@@ -26,7 +23,6 @@ RUN echo "deb http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main" \
 
 ## Install rJava
 RUN install2.r --error rJava
-
 
 
 RUN  git config --global user.email 'ian.moran11@gmail.com'
