@@ -24,10 +24,10 @@ RUN  git config --global user.name 'Ian Moran'
 #sudo docker run --restart=always -d your_image
 
 # to build this image:
-# docker build -t ianmoran11/tidyverse_ian_3.4.0 /home/ubuntu/dockerfiles/tidyverse_ian_3.4.0
+# docker build -t ianmoran11/rjava /home/ubuntu/dockerfiles/rjava
 
 # to run this container:
-# docker run  --restart=always -dp 8787:8787 ianmoran11/tidyverse_ian_3.4.0
+# docker run  --restart=always -dp 8787:8787 ianmoran11/rjava
 
 
 
