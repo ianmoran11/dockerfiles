@@ -47,7 +47,7 @@ RUN apt-get update -qq  \
     stm  \
     magrittr 
 
-
+RUN echo "install.packages('rJava', repos='http://www.rforge.net/', configure.args='--disable-Xrs')" | R --no-save
 
 RUN  git config --global user.email 'ian.moran11@gmail.com'
 RUN  git config --global user.name 'Ian Moran'
