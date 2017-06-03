@@ -18,15 +18,9 @@ RUN apt-get update -qq  \
   && install2.r \
     --deps TRUE \
     tidyverse \
-    dplyr \
-    ggplot2 \
     devtools \
     formatR \
     remotes \ 
-    broom \
-    dplyr \
-    ggplot2 \     
-    haven  \
     knitr  \
     lubridate \
     purrr \
@@ -34,32 +28,16 @@ RUN apt-get update -qq  \
     tidyr \
     stringr \
     tibble \
-    foreign \
-    dplyr  \
-    ggplot2 \
-    tidyr  \
+    foreegn \
     rdrop2  \
-    rvest  \
     selectr \
     xml2 \ 
     magrittr \
     broom  \
     dplyr \
-    ggplot2 \     
     haven  \
-    knitr \
-    lubridate   \
-    purrr  \
-    readr \
-    tidyr \
-    stringr \
-    tibble \
-    foreign \
     intsvy \
-    dplyr \
     ggplot2 \
-    tidyr  \
-    rdrop2  \
     aws.s3  \
     pdftools \
     rvest  \
