@@ -1,0 +1,35 @@
+# get the base image, this one has R, RStudio and pandoc
+FROM rocker/tidyverse:3.4.0
+# required
+MAINTAINER Ian Moran <ian.moran11@gmail.com>
+
+RUN echo "root:root" | chpasswd
+
+
+
+# go into the repo directory
+RUN   apt-get update 
+
+
+
+RUN echo "install.packages('rJava', repos='http://www.rforge.net/', configure.args='--disable-Xrs')" | R --no-save
+
+
+RUN  git config --global user.email 'ian.moran11@gmail.com'
+RUN  git config --global user.name 'Ian Moran'
+
+
+
+# To keep on
+#sudo docker run --restart=always -d your_image
+
+# to build this image:
+# docker build -t ianmoran11/tidyverse_ian_3.4.0 /home/ubuntu/dockerfiles/tidyverse_ian_3.4.0
+
+# to run this container:
+# docker run  --restart=always -dp 8787:8787 ianmoran11/tidyverse_ian_3.4.0
+
+
+
+
+
