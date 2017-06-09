@@ -1,7 +1,6 @@
 FROM rocker/rstudio
 
 
-RUN echo "root:root" | chpasswd
 
 
 RUN echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | /usr/bin/debconf-set-selections
@@ -23,3 +22,7 @@ RUN apt-get clean
 
 #RUN  mkdir -p /usr/lib/jvm/default-java/ && ln -s /usr/lib/jvm/java-8-oracle/ /usr/lib/jvm/default-java/
 ENV JAVA_HOME /usr/lib/jvm/java-8-oracle/jre/
+
+
+RUN echo "root:root" | chpasswd
+
