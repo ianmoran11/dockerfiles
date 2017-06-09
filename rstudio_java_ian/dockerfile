@@ -1,5 +1,9 @@
 FROM rocker/rstudio:3.4.0
 
+
+RUN echo "root:root" | chpasswd
+
+
 RUN echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | /usr/bin/debconf-set-selections
 
 # update repos
